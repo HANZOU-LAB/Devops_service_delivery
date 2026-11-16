@@ -2,8 +2,6 @@ import os
 from flask import Flask, jsonify
 
 app = Flask(__name__)
-
-# Versão configurada via variável de ambiente; valor por defeito: v1.0.0
 VERSION = os.getenv("APP_VERSION", "v1.0.0")
 
 
