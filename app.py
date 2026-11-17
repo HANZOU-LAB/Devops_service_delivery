@@ -19,7 +19,7 @@ def info():
 @app.route('/health')
 def health():
     """Endpoint de monitorização automática de saúde."""
-    return jsonify({"status": "healthy"}), 200
+    return jsonify({"status": "broken"}), 200
 
 
 if __name__ == '__main__':
