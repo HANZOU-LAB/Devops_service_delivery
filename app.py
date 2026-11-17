@@ -2,7 +2,7 @@ import os
 from flask import Flask, jsonify
 
 app = Flask(__name__)
-VERSION = os.getenv("APP_VERSION", "v1.0.0")
+VERSION = os.getenv("APP_VERSION", "v1.1.0")
 
 
 @app.route('/')
@@ -19,7 +19,7 @@ def info():
 @app.route('/health')
 def health():
     """Endpoint de monitorização automática de saúde."""
-    return jsonify({"status": "broken"}), 200
+    return jsonify({"status": "healthy"}), 200
 
 
 if __name__ == '__main__':
